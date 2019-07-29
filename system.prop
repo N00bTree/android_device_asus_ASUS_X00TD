@@ -1,0 +1,7 @@
+ro.product.model=ASUS_X00TD
+ro.product.brand=asus
+ro.product.name=WW_X00TD
+ro.product.device=ASUS_X00TD
+ro.build.product=sdm660_64
+ro.treble.enabled=true
+

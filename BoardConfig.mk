@@ -1,5 +1,5 @@
 # Device path
-LOCAL_PATH := device/asus/X00T
+LOCAL_PATH := device/asus/ASUS_X00TD
 
 ########
 # CPU  #
@@ -15,6 +15,10 @@ TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a73
+
+TARGET_CPU_ABI_LIST_64_BIT := $(TARGET_CPU_ABI)
+TARGET_CPU_ABI_LIST_32_BIT := $(TARGET_2ND_CPU_ABI),$(TARGET_2ND_CPU_ABI2)
+TARGET_CPU_ABI_LIST := $(TARGET_CPU_ABI_LIST_64_BIT),$(TARGET_CPU_ABI_LIST_32_BIT)
 
 TARGET_USES_64_BIT_BINDER := true
 ENABLE_CPUSETS := true
@@ -46,6 +50,9 @@ BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3 firmware_class.pa
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 # prebuilt kernel
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image.gz-dtb
+
+# system.prop
+TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144
@@ -100,7 +107,7 @@ TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 
 # Encryption
-PLATFORM_SECURITY_PATCH := 2019-05-24
+PLATFORM_SECURITY_PATCH := 2019-05-01
 TW_INCLUDE_CRYPTO := true
 TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
 TARGET_HW_DISK_ENCRYPTION := true

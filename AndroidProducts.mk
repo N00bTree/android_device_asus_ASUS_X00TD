@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_X00T.mk
+  $(LOCAL_DIR)/omni_ASUS_X00TD.mk

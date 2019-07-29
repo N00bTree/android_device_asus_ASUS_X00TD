@@ -1,5 +1,5 @@
 # Release name
-PRODUCT_RELEASE_NAME := X00T
+PRODUCT_RELEASE_NAME := ASUS_X00TD
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -12,8 +12,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore=sdm660
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := X00T
-PRODUCT_NAME := omni_X00T
+PRODUCT_DEVICE := ASUS_X00TD
+PRODUCT_NAME := omni_ASUS_X00TD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_X00TD
 PRODUCT_MANUFACTURER := asus
